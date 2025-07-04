@@ -14,7 +14,7 @@ const app = express();
 
 app.use(helmet());
 app.use(cors({
-  origin: 'http://localhost:5173,https://campaign-manager-alpha-five.vercel.app/',
+  origin: ['http://localhost:5173', 'https://campaign-manager-alpha-five.vercel.app'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   credentials: true,            // if you need to send cookies/auth headers
 }));

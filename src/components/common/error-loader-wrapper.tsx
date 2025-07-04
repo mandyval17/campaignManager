@@ -1,8 +1,8 @@
 import { Error } from '@/components/ui/error';
-import { Loader } from '@/components/ui/loader';
 import { CustomError } from '@/hooks/tanstackCustom/useCustomQuery';
 import { Box } from '@mui/material';
 import React from 'react';
+import { Loader } from '../ui/loader';
 
 type WrapperComponentProps<T> = {
   isLoading: boolean;

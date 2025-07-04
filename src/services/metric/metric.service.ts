@@ -33,7 +33,7 @@ export default class MetricService {
     const queryClient = useQueryClient();
     return useCustomMutation({
       mutationFn: (data: TCreateMetric) => MetricApis.createMetric(data),
-      onSettled: async (data, error) => {
+      onSettled: async (_data, error) => {
         if (error) {
           toast.error(errorMessageFormatter(error));
         } else {
@@ -48,7 +48,7 @@ export default class MetricService {
     const queryClient = useQueryClient();
     return useCustomMutation({
       mutationFn: ({ id, data }: { id: string, data: Partial<TMetric> }) => MetricApis.updateMetric(id, data),
-      onSettled: async (data, error) => {
+      onSettled: async (_data, error) => {
         if (error) {
           toast.error(errorMessageFormatter(error));
         } else {
@@ -63,7 +63,7 @@ export default class MetricService {
     const queryClient = useQueryClient();
     return useCustomMutation({
       mutationFn: (id: string) => MetricApis.deleteMetric(id),
-      onSettled: async (data, error) => {
+      onSettled: async (_data, error) => {
         if (error) {
           toast.error(errorMessageFormatter(error));
         } else {

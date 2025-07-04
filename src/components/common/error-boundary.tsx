@@ -1,7 +1,7 @@
 import { Box, Typography } from '@mui/material';
 import { ErrorBoundary, FallbackProps } from "react-error-boundary";
 
-function fallbackRender({ error, resetErrorBoundary }: FallbackProps) {
+function fallbackRender({ error }: FallbackProps) {
   // Call resetErrorBoundary() to reset the error boundary and retry the render.
 
   return (
@@ -17,7 +17,7 @@ export default function MyErrorBoundary({ children }: { children: React.ReactNod
   return (
     <ErrorBoundary
       fallbackRender={fallbackRender}
-      onReset={(details) => {
+      onReset={() => {
         // Reset the state of your app so the error doesn't happen again
       }}
     >

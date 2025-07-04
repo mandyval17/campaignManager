@@ -1,1 +1,1 @@
-export const DB_URL = 'http://localhost:5000/api/v1';
+export const DB_URL = 'https://campaignmanager-towz.onrender.com/api/v1/';

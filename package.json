@@ -2,7 +2,8 @@
 	"name": "express-api-starter-ts",
 	"version": "1.2.0",
 	"description": "A basic starter for an express.js API with TypeScript",
-	"main": "dist/index.js",
+	"main": "dist/index",
+	"types": "dist/index",
 	"scripts": {
 		"dev": "nodemon src/index.ts",
 		"build": "tsc",

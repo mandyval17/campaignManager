@@ -1,7 +1,7 @@
 {
 	"compilerOptions": {
 		"moduleResolution": "node",
-		"rootDir": "../",
+		"rootDir": "src",
 		"outDir": "dist",
 		"sourceMap": true,
 		"target": "esnext",
@@ -14,11 +14,9 @@
 		"resolveJsonModule": true
 	},
 	"include": [
-		"./*.js",
-		"src/api/**/*.ts",
 		"src/**/*.ts",
-		"test/**/*.ts",
-		"prisma/**/*.ts"
+		"prisma/*.ts", // if you seed in TypeScript
+		"test/**/*.ts" // for your local tests
 	],
 	"exclude": ["node_modules", "dist"]
 }

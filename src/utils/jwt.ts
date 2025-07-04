@@ -10,13 +10,13 @@ export const cookie = {
     AUTH_TOKEN: {
       httpOnly: false,
       maxAge: 24 * 60 * 60 * 1000, // 10 minutes
-      sameSite: 'lax',
+      sameSite: 'none',
       secure: env.NODE_ENV === 'production',
     } satisfies CookieOptions,
     REFRESH_TOKEN: {
       httpOnly: true,
       maxAge: 24 * 60 * 60 * 1000, // 1 day
-      sameSite: 'lax',
+      sameSite: 'none',
       secure: env.NODE_ENV === 'production',
     } satisfies CookieOptions,
   },
